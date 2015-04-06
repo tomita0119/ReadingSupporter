@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    
+    <link href="bootstrap3/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" media="screen">
+    <link href="css/bookmarker.css" rel="stylesheet" media="screen">
+    
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="angularjs/angular.min.js"></script>
+    <script type="text/javascript" src="bootstrap3/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/bookmarker.js"></script>
+    
+    <title>ReadingSupporter</title>
+</head>
+<body ng-app>
+    <div ng-controller="BMCtl">
+        <h2>ReadingSupporter</h2>
+        <h3>Total: {{ Count }}<span class="page" ng-if="Count > 1">pages</span><span class="page" ng-if="Count <= 1">page</span></h3>
+        <hr>
+        <ul id="bookmark_list">
+            <li ng-repeat="bookmark in bookmarks" id="bookmark{{ bookmark.id }}" class="bookmarks ng-class:{alart: bookmark.alart}">
+                <button class="btn btn-default btn-sm rm_btn ng-class:{alart_btn: bookmark.alart}" title="ブックマークを削除" ng-click="removeBookmark(bookmark.id)"><i class="fa fa-trash-o fa-lg"></i></button>
+                <img ng-if="bookmark.favicon != null" src="{{ bookmark.favicon }}">
+                <img ng-if="bookmark.favicon == null" src="img/not_found.png">
+                <a href="{{ bookmark.url }}" target="_blank" ng-click="removeBookmark(bookmark.id)">{{ bookmark.title }}</a>
+                <ul>
+                    <li>Marked in {{ bookmark.date }}</li>
+                    <li ng-if="bookmark.alart" class="alart_message">そろそろ読みませんか？</li>
+                </ul>
+            </li>
+        </ul>
+        <div class="btn_group">
+            <button class="btn btn-default" id="restore_btn" ng-click="restoreAll()" title="全てのブックマークを復元します"><i class="fa fa-folder-open-o"></i>AllRestore</button>
+            <button class="btn btn-default" id="delete_btn" ng-click="deleteAll()" title="全てのブックマークを削除します"><i class="fa fa-trash-o"></i>AllDelete</button>
+            <button class="btn btn-default" id="bookmark_btn" ng-click="bookmarkAll()" title="開いているこのページ以外の全てのページをブックマークします"><i class="fa fa-bookmark-o"></i>AllBookmark</button>
+        </div>
+        <br>
+<!--         <p><a href="help.html" id="help">ヘルプ</a></p> -->
+    </div>
+</body>
+</html>

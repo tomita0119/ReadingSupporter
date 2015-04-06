@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    
+    <link href="bootstrap3/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" media="screen">
+    <link href="css/options.css" rel="stylesheet" media="screen">
+    
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="bootstrap3/js/bootstrap.min.js"></script>
+    
+    <title>ReadingSupporter Options</title>
+</head>
+<body>
+    <h2>設定</h2>
+    <div id="select_options">
+        <div id="permissible_bookmark" class="options">
+            許容するブックマーク数:
+            <select name="permissible" id="select1">
+                <option value="3">3</option>
+                <option value="5">5 (Default)</option>
+                <option value="7">7</option>
+                <option value="10">10</option>
+            </select>
+        </div>
+        <div id="alart_day" class="options">
+            ブックマークしてから
+            <select name="alart" id="select2">
+                <option value="1">1</option>
+                <option value="3">3 (Default)</option>
+                <option value="5">5</option>
+                <option value="7">7</option>
+            </select>
+            日以上経つと警告
+        </div>
+    </div>
+    <div id="radio_options">
+        <div id="radio1" class="options">
+            ブックマークしたら常にリストを表示するかどうか
+            <div class="radio">
+                <label>
+                    <input type="radio" name="showbookmarklist" id="radio1-1" value="yes">
+                        ブックマークしたらリストを表示する
+                </label>
+            </div>
+            <div class="radio">
+                <label>
+                    <input type="radio" name="showbookmarklist" id="radio1-2" value="no">
+                        ブックマークしてもリストを表示しない (Default)
+                </label>
+            </div>
+        </div>
+        <div id="radio2" class="options">
+            ブラウザ起動時にリストを表示するかどうか
+            <div class="radio">
+                <label>
+                    <input type="radio" name="showlist_ft" id="radio2-1" value="yes">
+                        ブラウザ起動時にリストを表示する (Default)
+                </label>
+            </div>
+            <div class="radio">
+                <label>
+                    <input type="radio" name="showlist_ft" id="radio2-2" value="no">
+                        ブラウザ起動時にリストを表示しない
+                </label>
+            </div>
+        </div>
+        <div id="radio3" class="options">
+            ブックマーク時にそのタブを削除するかどうか
+            <div class="radio">
+                <label>
+                    <input type="radio" name="removetab" id="radio3-1" value="yes">
+                        タブを削除する
+                </label>
+            </div>
+            <div class="radio">
+                <label>
+                    <input type="radio" name="removetab" id="radio3-2" value="no">
+                        タブを削除しない (Default)
+                </label>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="js/options.js"></script>
+</html>

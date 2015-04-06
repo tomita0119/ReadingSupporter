@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    
+    <link href="bootstrap3/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" media="screen">
+    <link href="css/popup.css" rel="stylesheet" media="screen">
+    
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="angularjs/angular.min.js"></script>
+    <script type="text/javascript" src="bootstrap3/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/popup.js"></script>
+</head>
+<body ng-app>
+    <div ng-controller="MainCtl">
+        <div class="row">
+            <center><button class="btn btn-success" ng-click="addBookmark()" title="現在開いているページをブックマーク"><i class="fa fa-bookmark"></i>このページをブックマーク</button></center>
+        </div>
+        <hr>
+         <ul style="list-style:none">
+            <li class="bookmarks" ng-repeat="bookmark in bookmarks" id="bookmark{{ bookmark.id }}">
+                <div class="row">
+                    <div class="col-xs-9">
+                        <span class="bm_name"><a href="{{ bookmark.url }}" target="_blank">{{ bookmark.title }}</a></span>
+                        <ul class="unstyled">
+                            <li><span class="date_info">{{ bookmark.date }}にブックマークされました．</span></li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-3">
+                        <button class="btn btn-default" title="ブックマークを削除" ng-click="removeBookmark(bookmark.id)"><i class="fa fa-trash-o"></i></button>
+                    </div>
+                </div>
+                <hr class="partition">
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

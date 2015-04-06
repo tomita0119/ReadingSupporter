@@ -1,0 +1,11 @@
+#ReadingSupporter_Message{
+    width: 200px;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    background-color: rgba(255,255,255,0.5);
+    padding: 5px;
+    position: absolute;
+    left: 0px;
+    top: -100px;
+    box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.5);
+}

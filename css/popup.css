@@ -1,0 +1,11 @@
+body{
+    width: 400px;
+    height:500px;
+    margin-top: 10px;
+}
+.bm_name{
+    font-size: 14px;
+}
+.date_info{
+    font-size: 12px;
+}

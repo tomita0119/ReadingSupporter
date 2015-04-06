@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    
+    <link href="bootstrap3/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" media="screen">
+    <link href="css/help.css" rel="stylesheet" media="screen">
+    
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="bootstrap3/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/help.js"></script>
+    
+    <title>Help</title>
+</head>
+<body>
+    <h2>ヘルプ</h2>
+    <ul>
+        <li>ヘルプという名の開発中メモ</li>
+        <li>書いとかないと何をしたいのか分からなくなって方向性を見失う可能性があるので</li>
+        <li>「読ませる」支援付きのリーディングリスト(後で読むリスト)を目指す</li>
+        <li>通常のリーディングリストの売りの一つである「オフラインでも読める」という所は今の所考えていない</li>
+        <li>具体的な支援としては...
+            <ul>
+                <li>ツールバーアイコンにバッヂを付けてどのくらい溜め込んでいるのか気づかせる</li>
+                <li>ブラウザ起動時にリストを表示</li>
+                <li>このリストのリンクをクリックしないと読んだ事にならない(ユーザに自発的に読ませる必要があると思ったので)</li>
+                <li>読まずに溜め込みすぎると警告</li>
+                <li>具体的には6ページ以上保存すると警告してバッヂを赤くする(通常は青色)</li>
+                <li>ブックマークした日から一定の日数が経つと警告</li>
+            </ul>
+        </li>
+        <li>仕様的に同じページは同じidが振られてしまって一つ消すと同じのは全部消えてしまう
+            <ul>
+                <li>ただ同じページを複数保存しておいてもしょうがないのでこれはこれでいいんじゃ？</li>
+            </ul>
+        </li>
+        <li><s>"div class=row"を加えると少しだけ横が伸びてスクロールできる状態になってすごく気持ち悪い</s>rowを"div class="container"で囲って解決</li>
+        <li>今後欲しい機能
+            <ul>
+                <li><s>ブックマークした日から一定の日数が経つと読む事を警告する機能</s></li>
+            </ul>
+        </li>
+    </ul>
+</body>

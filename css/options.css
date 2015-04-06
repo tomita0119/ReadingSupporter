@@ -1,0 +1,28 @@
+h2{
+    margin-left: 5px;
+    font-weight: 200
+}
+h4{
+    margin-left: 15px;
+}
+#select_options{
+    margin-left: 15px;
+    font-size: 16px;
+}
+#select_options div{
+    margin-bottom: 10px;
+}
+select{
+    margin-left: 5px;
+}
+#radio_options{
+    margin-left: 15px;
+    font-size: 16px;
+}
+.radio{
+    margin-left: 10px;
+    font-size: 14px;
+}
+.options{
+    margin-top: 30px;
+}
