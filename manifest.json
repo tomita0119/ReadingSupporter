@@ -13,7 +13,7 @@
     },
     "options_page":"Options.html",
     "browser_action":{
-        "default_title":"BookMarker",
+        "default_title":"ReadingSupporter",
         "default_icon":"img/icon.png"
     },
     "permissions":[
